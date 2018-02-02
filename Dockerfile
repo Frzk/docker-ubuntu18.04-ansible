@@ -9,6 +9,7 @@ RUN apt-get update \
     git \
     python-pip \
     systemd \
+    tzdata \
  && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade setuptools \
