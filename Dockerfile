@@ -9,13 +9,13 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends \
     build-essential \
     git \
-    python-apt \
     python-pip \
     systemd \
     tzdata \
  && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade setuptools \
+ && pip install python-apt \
  && pip install wheel \
  && pip install ansible
 
