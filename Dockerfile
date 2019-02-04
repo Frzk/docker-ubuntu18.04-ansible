@@ -10,11 +10,11 @@ RUN apt-get update \
     build-essential \
     git \
     python-pip \
+    python-apt \
     systemd \
     tzdata
 
 RUN pip install --upgrade setuptools \
- && pip install python-apt \
  && pip install wheel \
  && pip install ansible
 
