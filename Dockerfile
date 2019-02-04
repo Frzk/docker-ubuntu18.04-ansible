@@ -11,8 +11,7 @@ RUN apt-get update \
     git \
     python-pip \
     systemd \
-    tzdata \
-# && rm -rf /var/lib/apt/lists/*
+    tzdata
 
 RUN pip install --upgrade setuptools \
  && pip install python-apt \
