@@ -15,10 +15,8 @@ RUN apt-get update \
     systemd \
     tzdata
 
-RUN pip install --upgrade setuptools \
- && pip install wheel \
- && pip install ansible \
- && pip install molecule[docker,lint]
+RUN python3 -m pip install --upgrade setuptools \
+ && python3 -m pip install wheel ansible molecule[docker,lint]
 
 RUN mkdir -p /etc/ansible
 ADD hosts /etc/ansible/
