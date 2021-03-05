@@ -15,7 +15,8 @@ RUN apt-get update \
     systemd \
     tzdata
 
-RUN python3 -m pip install --upgrade setuptools \
+RUN python3 -m pip install --upgrade pip \
+ && python3 -m pip install --upgrade setuptools \
  && python3 -m pip install wheel ansible molecule[docker,lint]
 
 RUN mkdir -p /etc/ansible
