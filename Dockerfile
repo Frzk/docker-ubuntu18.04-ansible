@@ -16,7 +16,8 @@ RUN apt-get update \
 
 RUN pip install --upgrade setuptools \
  && pip install wheel \
- && pip install ansible
+ && pip install ansible \
+ && pip install molecule[docker,lint]
 
 RUN mkdir -p /etc/ansible
 ADD hosts /etc/ansible/
